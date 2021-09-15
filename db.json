@@ -1,0 +1,54 @@
+{
+    "tricks": [
+        { 
+            "id": 1,
+            "name": "Ollie", 
+            "instruction": "Push down on back, jump, and slide front foot forward.", 
+            "difficulty": 2, 
+            "video": "https://www.youtube.com/watch?v=VasSLuFO4wY",  
+            "image": "https://i.makeagif.com/media/9-12-2016/1TJjLm.gif", 
+            "likes": 0, 
+            "my_library": false
+        },
+        { 
+            "id": 2,
+            "name": "Pop Shove it", 
+            "instruction": "Push down on back, scoop with rear foot as you jump, catch board with feet and land.", 
+            "difficulty": 2, 
+            "video": "https://www.youtube.com/watch?v=DwCJvALEJWk",  
+            "image": "https://nollieskateboarding.com/_tmp/uploads/bs180_motion.gif", 
+            "likes": 0, 
+            "my_library": false
+        },
+        { 
+            "id": 3,
+            "name": "Frontside 180", 
+            "instruction": "Push down on back, jump and scoop the board to the front with rear foot, turn body with the board, catch with feet and land.", 
+            "difficulty": 2, 
+            "video": "https://www.youtube.com/watch?v=ZSe9vPoXKiU&t=32s",  
+            "image": "https://nollieskateboarding.com/_tmp/uploads/fs180top.gif", 
+            "likes": 0, 
+            "my_library": false
+        },
+        { 
+            "id": 4,
+            "name": "Backside 180", 
+            "instruction": "Push down on back, jump and scoop the board to the back with rear foot, turn body with the board, catch board with feet and land.", 
+            "difficulty": 2, 
+            "video": "https://www.youtube.com/watch?v=IV27vYiLf6E",  
+            "image": "https://nollieskateboarding.com/_tmp/uploads/bs180_motion.gif", 
+            "likes": 0, 
+            "my_library": false
+        },
+        { 
+            "id": 5,
+            "name": "Kickflip", 
+            "instruction": "Push down on back, jump and flick with front leg ankle to 45 degrees, catch board with feet and land", 
+            "difficulty": 3, 
+            "video": "https://www.youtube.com/watch?v=-9ObaLwecNc",  
+            "image": "https://nollieskateboarding.com/_tmp/uploads/kf_01.gif", 
+            "likes": 0, 
+            "my_library": false
+        }
+    ]
+}
