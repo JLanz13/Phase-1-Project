@@ -32,8 +32,19 @@ function getTrick(event, trick) {
     const trickInst = document.querySelector('#instruction')
     trickInst.textContent = `Instruction: ${trick.instruction}`
 
-    const vidLink = document.querySelector('#vid-link');
-    vidLink.textContent = `Vid: ${trick.video}`;
+
+    const vidLinkDiv = document.querySelector('#vid-link');
+    vidLinkDiv.innerHTML = `
+     <iframe 
+       width="761" 
+       height="428" 
+       src="https://www.youtube.com/embed/${trick.video}" 
+       title="YouTube video player" 
+       frameborder="0" 
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+       allowfullscreen>
+     </iframe>
+    `
 
     const diffLevel = document.querySelector('#difficulty');
     diffLevel.textContent = `Difficulty: ${trick.difficulty}`;
@@ -42,17 +53,24 @@ function getTrick(event, trick) {
     dopeCount.textContent = `Dope: ${trick.likes}`;
     
     const dopeBttn = document.querySelector('#dope-counter')
-    dopeBttn.addEventlistener('click', () => dopeCounter(trick, dopeCount))
+    dopeBttn.addEventListener('click', () => dopeCounter(trick, dopeCount))
 
 }
 
 function dopeCounter(trick, dopeCount) {
-    ++trick.likes;
+    trick.likes++;
     dopeCount.textContent = `Dope: ${trick.likes}`;
+
+    fetch(`${BASE_URL}/${trick.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({likes: trick.likes})
+    })
 }
 
 function formInfo(event) {
-    console.log(event)
     event.preventDefault();
 
     const newTrick = {
@@ -62,10 +80,22 @@ function formInfo(event) {
         instruction: event.target['inst'].value,
         video: event.target['vid'].value,
         likes: 0,
-
     }
 
-    renderTricks(newTrick)
+   
+
+    fetch(BASE_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newTrick)
+    })
+    .then(res => res.json())
+    .then(trickObj =>  renderTricks(trickObj))
+
+
+    
 
     event.target.reset()
 
