@@ -28,21 +28,24 @@
     <div id="trick-details">
         <h2 class="skate-trick">Skate Tricks Name</h2>
         <img class="skate-img" src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=425,format=auto/sites/default/files/styles/768x768/public/d8/images/methode/2021/07/31/a1877f66-f18f-11eb-b683-cf7af9070523_image_hires_124145.jpg?itok=5XHf5r-0&v=1627706514" alt="Skateboarding Image">
+        <h4 id='instruction'>Instructions:</h4>
         <h4 id="vid-link">Vid:</h4>
-        <h4 id="difficulty">Difficulty Level</h3>
+        <h4 id="difficulty">Difficulty:</h3>
         <h4 id="dope">Dope: </h4>
         <button id="dope-counter">🔥</button>
         
         <h2>Add A Trick</h2>
         <form class="trick-form">
             <h3>Trick Name:</h3>
-            <textarea id="add-name"></textarea>
+            <textarea name='name' id="add-name"></textarea>
             <h3>Trick Image:</h3>
-            <textarea id="add-img"></textarea>
+            <textarea name='img' id="add-img"></textarea>
+            <h3>Instructions</h3>
+            <textarea name='inst' id='add-inst'></textarea>
             <h3>Trick Video:</h3>
-            <textarea id="add-video"></textarea>
+            <textarea name='vid' id="add-video"></textarea>
             <h3>Trick Difficulty:</h3>
-            <textarea id="add-difficulty"></textarea>
+            <textarea name='diff' id="add-difficulty"></textarea>
             <br>
             <button>Submit</button>
         </form>
