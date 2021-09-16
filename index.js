@@ -36,9 +36,15 @@ function getTrick(event, trick) {
     const diffLevel = document.querySelector('#difficulty');
     diffLevel.textContent = `Difficulty: ${trick.difficulty}`;
 
-    const dopeCount = document.querySelector('#dope')
+    const dopeCount = document.querySelector('#dope');
     dopeCount.textContent = `Dope: ${trick.likes}`;
-    dopeCount.addEventListener('click', dopeCounter)
+    
+    const dopeBttn = document.querySelector('#dope-counter')
+    dopeBttn.addEventListener('click', () => dopeCounter(trick, dopeCount))
+
 }
 
-function dopeCounter()
+function dopeCounter(trick, dopeCount) {
+    ++trick.likes;
+    dopeCount.textContent = trick.likes;
+}
